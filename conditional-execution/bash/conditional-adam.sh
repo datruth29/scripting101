@@ -24,7 +24,6 @@ echo
 # Note: There HAS to be a better way to do this.....
 
 ipadd=$(ifconfig | grep -w "inet" | grep -v "127.0.0.1" | awk '{ print $2}')
-ipadd=172.32.1.1
 case $ipadd in
 	10.*) echo -n "Your in a class A private network";;
 	172.1[6-9].*) echo -n "Your in a class B private network";;
